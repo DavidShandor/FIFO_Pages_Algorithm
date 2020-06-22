@@ -1,0 +1,41 @@
+Username: Davidsa
+Name: David Shandor   id: 302902705
+
+Program Description:
+
+This program simulating a real page-switch system, works by FIFO. 
+User can load value into parameter or store value into main memory index.
+
+Compilation:
+Ctrl+Shift+B -> Build-> Continue without scanning the task output.
+
+Launch the Program: 
+Ctrl+F5     
+
+Attached filed:
+MakeFile, launch.json, tasks.json - Configuration files.
+main.cpp – The Main Program.
+sim_mem.h – Header file. Include function declaration. 
+sim_mem.cpp – Implementation Function of sim_mem.h
+
+How to use the program:
+First, initialize new object by fill the attribute below (except "exec_file_name"):
+sim_mem object("exec_file_name", "swap_file_name", text_size, data_size, bss_size, heap_size, num_of_pages, page_size);
+
+C - char, A- address, V- value
+To load value from memory:
+C = object.load(A);
+To store to memory:
+object.store(A, 'V');
+
+NOTE:
+Must attached execute file.
+This program is NOT dynamic program, which mean the user can't set command while running. 
+However, the user can put all the command before launch the program to load or store values as wishes.   
+
+
+
+
+
+
+
